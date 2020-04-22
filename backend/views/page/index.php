@@ -30,7 +30,25 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'content:ntext',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'header' => 'Actions',
+                'headerOptions' => ['style' => 'color:#337ab7'],
+                'template' => '{view}{update}{delete}',
+                'buttons' => [
+                  'view' => function ($url, $model) {
+                      return Html::a('<span class="fa fa-eye"></span>', $url);
+                  },
+      
+                  'update' => function ($url, $model) {
+                      return Html::a('<span class="fa fa-pen"></span>', $url);
+                  },
+                  'delete' => function ($url, $model) {
+                      return Html::a('<span class="fa fa-trash"></span>', $url);
+                  }
+      
+                ],
+            ],
         ],
     ]); ?>
 
