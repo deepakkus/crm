@@ -33,9 +33,9 @@ use yii\widgets\Menu;
             <img src="/images/dev.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-            <a href="#" class="d-block"><?php echo (Yii::$app->user->identity) ? Yii::$app->user->identity->username : 'Admin'  ?> &nbsp;&nbsp; 
-            <span class="dot"></span>
-            </a>
+                <a href="#" class="d-block"><?php echo (Yii::$app->user->identity) ? Yii::$app->user->identity->username : 'Admin'  ?> &nbsp;&nbsp; 
+                    <span class="dot"></span>
+                </a>
             </div>
         </div>
 

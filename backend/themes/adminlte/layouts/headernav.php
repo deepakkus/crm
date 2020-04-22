@@ -1,5 +1,6 @@
 <?php 
 use yii\widgets\Menu;
+use yii\helpers\Html;
 ?>
 
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -20,6 +21,17 @@ use yii\widgets\Menu;
             'linkTemplate' => '<a href="{url}" class="nav-link">{label}</a>',
         ]);
                 
+    ?>
+
+    <?php
+        if(!Yii::$app->user->isGuest) {
+        echo  Html::beginForm(['/site/logout'], 'post') 
+            . Html::submitButton(
+                'Logout (' . Yii::$app->user->identity->username . ')',
+                ['class' => 'btn btn-link logout']
+            )
+            . Html::endForm();
+        }
     ?>
 
     <!-- SEARCH FORM -->
