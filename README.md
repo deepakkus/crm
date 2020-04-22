@@ -24,6 +24,17 @@ composer install
 
 change db config in /common/config/main-local.php
 
+migrate database files
+
+```bash
+php yii migrate/up
+```
+now go to /backend/web and type
+```bash
+php -S localhost:8000
+```
+now backend ready in http://localhost:8000/ !n joy
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
