@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3855c10c4383afe321f428193b7e5000",
+    "content-hash": "1c3371bf29d3648f2ac1b22b13013479",
     "packages": [
         {
             "name": "bera/upload",
@@ -366,6 +366,162 @@
             "time": "2019-10-28T03:44:26+00:00"
         },
         {
+            "name": "fortawesome/font-awesome",
+            "version": "5.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "4e6402443679e0a9d12c7401ac8783ef4646657f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/4e6402443679e0a9d12c7401ac8783ef4646657f",
+                "reference": "4e6402443679e0a9d12c7401ac8783ef4646657f",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC-BY-4.0",
+                "OFL-1.1",
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Travis Chase",
+                    "homepage": "http://twitter.com/supercodepoet"
+                },
+                {
+                    "name": "Dave Gandy",
+                    "homepage": "http://twitter.com/davegandy"
+                },
+                {
+                    "name": "Rob Madole",
+                    "homepage": "http://twitter.com/robmadole"
+                },
+                {
+                    "name": "Jory Raphael",
+                    "homepage": "http://twitter.com/sensibleworld"
+                },
+                {
+                    "name": "Geremia Taglialatela",
+                    "homepage": "http://twitter.com/gtagliala"
+                },
+                {
+                    "name": "Brian Talbot",
+                    "homepage": "http://twitter.com/talbs"
+                },
+                {
+                    "name": "Mike Wilkerson",
+                    "homepage": "http://twitter.com/mw77"
+                }
+            ],
+            "description": "The iconic font, CSS, and SVG framework",
+            "homepage": "https://fontawesome.com",
+            "keywords": [
+                "FontAwesome",
+                "awesome",
+                "bootstrap",
+                "font",
+                "icon",
+                "svg"
+            ],
+            "time": "2020-03-23T18:53:09+00:00"
+        },
+        {
+            "name": "froala/wysiwyg-editor",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/froala/wysiwyg-editor.git",
+                "reference": "226a8fcad84db0a79c274ad55599970239a821c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/froala/wysiwyg-editor/zipball/226a8fcad84db0a79c274ad55599970239a821c4",
+                "reference": "226a8fcad84db0a79c274ad55599970239a821c4",
+                "shasum": ""
+            },
+            "type": "component",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Froala Labs",
+                    "email": "support@froala.com"
+                }
+            ],
+            "description": "A beautiful jQuery WYSIWYG HTML rich text editor. High performance and modern design make it easy to use for developers and loved by users.",
+            "homepage": "https://www.froala.com/wysiwyg-editor",
+            "keywords": [
+                "editor",
+                "froala",
+                "froala-editor",
+                "froala-wysiwyg",
+                "html",
+                "javascript",
+                "jquery",
+                "jquery-plugin",
+                "rich editor",
+                "rich text editor",
+                "rte",
+                "text",
+                "wysiwyg"
+            ],
+            "time": "2020-01-13T14:14:47+00:00"
+        },
+        {
+            "name": "froala/yii2-froala-editor",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/froala/yii2-froala-editor.git",
+                "reference": "e35adc05b1adfdc43e91f19e391f481ff24491d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/froala/yii2-froala-editor/zipball/e35adc05b1adfdc43e91f19e391f481ff24491d6",
+                "reference": "e35adc05b1adfdc43e91f19e391f481ff24491d6",
+                "shasum": ""
+            },
+            "require": {
+                "froala/wysiwyg-editor": "3.1.0",
+                "rmrevin/yii2-fontawesome": "^2.0 | ^3.0",
+                "yiisoft/yii2": "^2.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "froala\\froalaeditor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "dungphanxuan",
+                    "email": "dungphanxuan999@gmail.com"
+                }
+            ],
+            "description": "A beautiful WYSIWYG HTML text editor based on HTML5 technology. Cross browser, with mobile support, high performance and Retina Ready modern design.",
+            "keywords": [
+                "editor",
+                "froala",
+                "html",
+                "javascript",
+                "rich editor",
+                "rich text editor",
+                "rte",
+                "text",
+                "wysiwyg"
+            ],
+            "time": "2020-01-15T12:53:48+00:00"
+        },
+        {
             "name": "kartik-v/yii2-krajee-base",
             "version": "v2.0.5",
             "source": {
@@ -465,6 +621,63 @@
                 "yii2"
             ],
             "time": "2014-11-09T08:07:23+00:00"
+        },
+        {
+            "name": "rmrevin/yii2-fontawesome",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmrevin/yii2-fontawesome.git",
+                "reference": "08277670fb96ae271a3d8484103ec0361bf41ac0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/08277670fb96ae271a3d8484103ec0361bf41ac0",
+                "reference": "08277670fb96ae271a3d8484103ec0361bf41ac0",
+                "shasum": ""
+            },
+            "require": {
+                "fortawesome/font-awesome": "^5.9.0",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "^2.0.0"
+            },
+            "require-dev": {
+                "doctrine/instantiator": "1.0.*",
+                "phpdocumentor/reflection-docblock": "~3.1.0",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "rmrevin\\yii\\fontawesome\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Revin Roman",
+                    "email": "roman@rmrevin.com",
+                    "homepage": "https://rmrevin.com/"
+                }
+            ],
+            "description": "Asset Bundle for Yii2 with Font Awesome",
+            "keywords": [
+                "asset",
+                "awesome",
+                "bundle",
+                "font",
+                "yii"
+            ],
+            "time": "2019-07-07T10:11:42+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -984,23 +1197,23 @@
         },
         {
             "name": "yiisoft/yii2-composer",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9"
+                "reference": "d191176c4f8372e397a9e3df27360dca6a70efaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/5c7ca9836cf80b34db265332a7f2f8438eb469b9",
-                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/d191176c4f8372e397a9e3df27360dca6a70efaa",
+                "reference": "d191176c4f8372e397a9e3df27360dca6a70efaa",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0 | ^2.0"
             },
             "require-dev": {
-                "composer/composer": "^1.0",
+                "composer/composer": "^1.0 | ^2.0@dev",
                 "phpunit/phpunit": "<7"
             },
             "type": "composer-plugin",
@@ -1035,7 +1248,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2019-07-16T13:22:30+00:00"
+            "time": "2020-04-20T18:47:46+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -1241,21 +1454,21 @@
         },
         {
             "name": "codeception/lib-asserts",
-            "version": "1.11.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/lib-asserts.git",
-                "reference": "1fdc310bf857c11d3703ae02689a2e482c71c5ab"
+                "reference": "acd0dc8b394595a74b58dcc889f72569ff7d8e71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/lib-asserts/zipball/1fdc310bf857c11d3703ae02689a2e482c71c5ab",
-                "reference": "1fdc310bf857c11d3703ae02689a2e482c71c5ab",
+                "url": "https://api.github.com/repos/Codeception/lib-asserts/zipball/acd0dc8b394595a74b58dcc889f72569ff7d8e71",
+                "reference": "acd0dc8b394595a74b58dcc889f72569ff7d8e71",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.0 <8.0",
-                "phpunit/phpunit": "^8.4 | ^9.0"
+                "codeception/phpunit-wrapper": ">6.0.15 <6.1.0 | ^6.6.1 | ^7.7.1 | ^8.0.3 | ^9.0",
+                "php": ">=5.6.0 <8.0"
             },
             "type": "library",
             "autoload": {
@@ -1282,7 +1495,7 @@
             "keywords": [
                 "codeception"
             ],
-            "time": "2020-02-11T10:45:21+00:00"
+            "time": "2020-04-17T18:20:46+00:00"
         },
         {
             "name": "codeception/lib-innerbrowser",
@@ -1339,21 +1552,21 @@
         },
         {
             "name": "codeception/module-asserts",
-            "version": "1.1.1",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/module-asserts.git",
-                "reference": "87c83ca3ccfbc0d79f5effb57e1f82eeaab0cb3e"
+                "reference": "79f13d05b63f2fceba4d0e78044bab668c9b2a6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-asserts/zipball/87c83ca3ccfbc0d79f5effb57e1f82eeaab0cb3e",
-                "reference": "87c83ca3ccfbc0d79f5effb57e1f82eeaab0cb3e",
+                "url": "https://api.github.com/repos/Codeception/module-asserts/zipball/79f13d05b63f2fceba4d0e78044bab668c9b2a6b",
+                "reference": "79f13d05b63f2fceba4d0e78044bab668c9b2a6b",
                 "shasum": ""
             },
             "require": {
                 "codeception/codeception": "*@dev",
-                "codeception/lib-asserts": "^1.0.0",
+                "codeception/lib-asserts": "^1.12.0",
                 "php": ">=5.6.0 <8.0"
             },
             "conflict": {
@@ -1387,7 +1600,7 @@
                 "asserts",
                 "codeception"
             ],
-            "time": "2019-11-13T17:32:27+00:00"
+            "time": "2020-04-20T07:26:11+00:00"
         },
         {
             "name": "codeception/module-filesystem",
@@ -1493,16 +1706,16 @@
         },
         {
             "name": "codeception/phpunit-wrapper",
-            "version": "8.1.1",
+            "version": "8.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/phpunit-wrapper.git",
-                "reference": "f1370a15e5fe60e7347b1c60642479b923a7ceef"
+                "reference": "e610200adf75ebc1ea7cf10d7cdb43e0f5fff3cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/f1370a15e5fe60e7347b1c60642479b923a7ceef",
-                "reference": "f1370a15e5fe60e7347b1c60642479b923a7ceef",
+                "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/e610200adf75ebc1ea7cf10d7cdb43e0f5fff3cc",
+                "reference": "e610200adf75ebc1ea7cf10d7cdb43e0f5fff3cc",
                 "shasum": ""
             },
             "require": {
@@ -1519,7 +1732,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Codeception\\PHPUnit\\": "src\\"
+                    "Codeception\\PHPUnit\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1533,7 +1746,7 @@
                 }
             ],
             "description": "PHPUnit classes used by Codeception",
-            "time": "2019-12-21T16:08:14+00:00"
+            "time": "2020-04-17T18:30:51+00:00"
         },
         {
             "name": "codeception/stub",
@@ -4164,16 +4377,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },
             "require": {
@@ -4181,7 +4394,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "vimeo/psalm": "<3.6.0"
+                "vimeo/psalm": "<3.9.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
@@ -4208,7 +4421,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-02-14T12:15:55+00:00"
+            "time": "2020-04-18T12:12:48+00:00"
         },
         {
             "name": "yiisoft/yii2-debug",

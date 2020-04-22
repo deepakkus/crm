@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use backend\models\Product;
 use backend\models\ProductSearch;
+use backend\models\ProductCategory;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -54,6 +55,7 @@ class ProductController extends Controller
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'product_img' => Product::getProductImageWithPath($id)
         ]);
     }
 
@@ -65,13 +67,17 @@ class ProductController extends Controller
     public function actionCreate()
     {
         $model = new Product();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if(Yii::$app->request->isPost)
+        {
+            if($model->createProduct(Yii::$app->request->post(), $_FILES['image'])) {
+                return $this->redirect('index');
+            } else {
+                echo 'error';
+            }
         }
-
         return $this->render('create', [
             'model' => $model,
+            'product_cat' => ProductCategory::getAllCategoryForDropdown()
         ]);
     }
 
@@ -86,12 +92,21 @@ class ProductController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        // if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        //     return $this->redirect(['view', 'id' => $model->id]);
+        // }
+
+        if(Yii::$app->request->isPost) {
+            $product = new Product;
+            if($product->updateProduct($id,Yii::$app->request->post(),$_FILES['image'])) {
+                return $this->redirect('index');
+            }
         }
 
         return $this->render('update', [
             'model' => $model,
+            'product_cat' => ProductCategory::getAllCategoryForDropdown(),
+            'product_img' => Product::getProductImageWithPath($id)
         ]);
     }
 

@@ -16,8 +16,8 @@ class m200417_113311_product extends Migration
             'name' => $this->string(255)->notNull()->unique(),
             'short_desp' => $this->text(),
             'long_desp' => $this->text(),
-            'price'    => $this->decimal(2)->notNull()->defaultValue(0.00),
-            'sell_price' => $this->decimal(2)->defaultValue(0.00),
+            'price'    => $this->decimal(10,2)->notNull()->defaultValue(0.00),
+            'sell_price' => $this->decimal(10,2)->defaultValue(0.00),
         ]); 
     }
 

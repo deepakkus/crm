@@ -13,8 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="product-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
+ 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
@@ -26,15 +25,21 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
+    <h3><?= Html::encode($this->title) ?></h3>
+    <img src="<?= $product_img ?>" width="250" height="200">
+
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+            // 'id',
             'name',
             'short_desp:ntext',
             'long_desp:ntext',
             'price',
             'sell_price',
+            // 'image_id',
+            'quantity_in_stock',
+            'product_cat_id',
         ],
     ]) ?>
 
