@@ -141,15 +141,15 @@ class AdminUser extends \yii\db\ActiveRecord implements IdentityInterface
 
     public function beforeSave($insert)
     {
-        if (parent::beforeSave($insert)) {
-            if ($this->isNewRecord) {
+        if (parent::beforeSave($insert)) 
+        {
+            if ($this->isNewRecord) 
                 $this->auth_key = \Yii::$app->security->generateRandomString();
-            }
             return true;
         }
         return false;
     }
-
+ 
     /**
      * register an user
      * @param string $username
@@ -172,12 +172,10 @@ class AdminUser extends \yii\db\ActiveRecord implements IdentityInterface
      */
     public static function changeAdminEmailAddress($username, $email)
     {
-        if(empty($email) || !isset($email)) {
+        if(empty($email) || !isset($email)) 
             return false;
-        }
-        if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
+        if(!filter_var($email,FILTER_VALIDATE_EMAIL)) 
             return false;
-        }
         $model = self::findByUsername($username);
         $model->email = $email;
         return $model->update();
@@ -192,13 +190,11 @@ class AdminUser extends \yii\db\ActiveRecord implements IdentityInterface
      */
     public function changeUserPassword($current_password, $new_password, $retyped_password )
     {
-        if($new_password !== $retyped_password) {
+        if($new_password !== $retyped_password) 
             return false;
-        }
         $user = self::findByUsername(Yii::$app->user->identity->username);
-        if(!$user || !$user->validatePassword($current_password)) {
+        if(!$user || !$user->validatePassword($current_password)) 
             return false;
-        }
         $user->password = Yii::$app->security->generatePasswordHash($new_password);
         return $user->update();
     }

@@ -85,10 +85,10 @@ class Blog extends \yii\db\ActiveRecord implements ImageInterface
 
     public function beforeSave($insert)
     {
-        if (parent::beforeSave($insert)) {
-            if (!$this->isNewRecord) {
-                $this->updated_at = date("Y-m-d H:i:s");
-            } 
+        if (parent::beforeSave($insert)) 
+        {
+            if (!$this->isNewRecord)
+                $this->updated_at = date("Y-m-d H:i:s"); 
             return true;
         }
         return false;
@@ -102,15 +102,17 @@ class Blog extends \yii\db\ActiveRecord implements ImageInterface
      */
     public function createNewBlog($data=[], $file=[])
     {
-        if(empty($data)) {
+        if(empty($data)) 
             return;
-        }
-        if($this->load($data)) {
+        if($this->load($data)) 
+        {
             $this->insert();
-            if($file['name'] != '') {
+            if($file['name'] != '') 
+            {
                 $image = new Image;
                 $image_upload_id = $image->createOrUploadAnImage(null,self::TYPE, $file,self::uploadImagePath());
-                if($image_upload_id !== false) {
+                if($image_upload_id !== false) 
+                {
                     $current_model = self::findOne($this->id);
                     $current_model->image_id = (int)$image_upload_id;
                     return $current_model->save();
@@ -131,10 +133,10 @@ class Blog extends \yii\db\ActiveRecord implements ImageInterface
     public function updateBlog($id, $data, $file) 
     {
         $blog = self::findOne($id);
-        if($blog->load($data)) {
+        if($blog->load($data)) 
             $blog->save();
-        }
-        if(isset($file['name']) && !empty($file['name'])) {
+        if(isset($file['name']) && !empty($file['name'])) 
+        {
             $image = new Image;
             $image->createOrUploadAnImage($blog->image_id, self::TYPE, $file,self::uploadImagePath());
         }
@@ -143,17 +145,18 @@ class Blog extends \yii\db\ActiveRecord implements ImageInterface
 
     public static function deleteBlog($id) 
     {
-        if(empty($id)) {
+        if(empty($id)) 
             return false;
-        }
         $blog = self::findOne($id);
-        if($blog){
+        if($blog)
+        {
             Image::deleteAnImage($blog->image_id,self::uploadImagePath());
             $blog->delete();
             return true;
-        } else {
+        } 
+        else 
             return false;
-        }
+
     }
 
     /**
@@ -164,9 +167,8 @@ class Blog extends \yii\db\ActiveRecord implements ImageInterface
     public static function getBlogImage($id) 
     {
         $blog = self::findOne($id);
-        if(is_null($blog)) {
+        if(is_null($blog)) 
             return '';
-        }
         return Image::getImageNameById($blog->image_id);
     }
 

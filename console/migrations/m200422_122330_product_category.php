@@ -13,7 +13,7 @@ class m200422_122330_product_category extends Migration
     {
         $this->createTable('product_category',[
             'id' => $this->primaryKey(),
-            'name' => $this->text()->notNull()->unique(),
+            'name' => $this->string(255)->notNull()->unique(),
             'parent_id' => $this->integer()
         ]);
         $this->addForeignKey('fk-product-product_cat_id','product','product_cat_id','product_category','id');
