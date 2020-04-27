@@ -1,6 +1,4 @@
 <?php 
-use kartik\sidenav\SideNav;
-
 use yii\widgets\Menu;
 
 ?>
@@ -38,57 +36,6 @@ use yii\widgets\Menu;
                 </a>
             </div>
         </div>
-
-        <?php 
-            /*
-            echo SideNav::widget([
-                'type' => SideNav::TYPE_PRIMARY ,
-                'heading' => '',
-                'items' => [
-                    [
-                        'url' => '#',
-                        'label' => 'Home',
-                        'icon' => 'home'
-                    ],
-                    [
-                        'url' => '#',
-                        'label' => 'Test',
-                        'icon' => 'Test',
-                        'items' => [
-                            ['label' => 'About', 'icon'=>'info-sign', 'url'=>'#'],
-                            ['label' => 'Contact', 'icon'=>'phone', 'url'=>'#'],
-                        ]
-                    ],
-                    [
-                        'label' => 'Help',
-                        'icon' => 'question-sign',
-                        'items' => [
-                            ['label' => 'About', 'icon'=>'info-sign', 'url'=>'#'],
-                            ['label' => 'Contact', 'icon'=>'phone', 'url'=>'#'],
-                        ],
-                    ],
-                ],
-            ]);
-           
-
-            echo Menu::widget([
-                'items' => [
-                    // Important: you need to specify url as 'controller/action',
-                    // not just as 'controller' even if default action is used.
-                    [
-                        'label' => 'dev', 
-                        'url' => ['site/index'],
-                    ],
-                    // 'Products' menu item will be selected as long as the route is 'product/index'
-                    ['label' => 'Products', 'url' => ['product/index'], 'items' => [
-                        ['label' => 'New Arrivals', 'url' => ['product/index', 'tag' => 'new']],
-                        ['label' => 'Most Popular', 'url' => ['product/index', 'tag' => 'popular']],
-                    ]]
-                ],
-            ]);
-             */
-        ?>
-
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
@@ -161,6 +108,12 @@ use yii\widgets\Menu;
                             </a>
                         </li>
                     </ul>
+                    <li class="nav-item">
+                        <a href="/product-category" class="nav-link">
+                            <i class="nav-icon fas fa-chart-pie"></i>
+                            <p>Product Category</p>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-chart-pie"></i>
