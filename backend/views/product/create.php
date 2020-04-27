@@ -5,14 +5,14 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Product */
 
-$this->title = 'Create New Product';
+$this->title = 'Create Product';
 $this->params['breadcrumbs'][] = ['label' => 'Products', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="container">
     <div class="product-create">
 
-        <h3><?= Html::encode($this->title) ?></h3>
+        <h4><?= Html::encode($this->title) ?></h4>
 
         <?= $this->render('_form', [
             'model' => $model,

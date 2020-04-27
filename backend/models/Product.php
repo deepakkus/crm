@@ -100,15 +100,17 @@ class Product extends \yii\db\ActiveRecord implements ImageInterface
      */
     public function createProduct($data, $file)
     {
-        if(empty($data)) {
+        if(empty($data)) 
             return;
-        }
-        if($this->load($data)) {
+        if($this->load($data)) 
+        {
             $this->insert();
-            if($file['name'] != '') {
+            if($file['name'] != '') 
+            {
                 $image = new Image;
                 $image_upload_id = $image->createOrUploadAnImage(null,self::TYPE, $file,self::uploadImagePath());
-                if($image_upload_id !== false) {
+                if($image_upload_id !== false) 
+                {
                     $current_model = self::findOne($this->id);
                     $current_model->image_id = (int)$image_upload_id;
                     return $current_model->save();
@@ -128,10 +130,10 @@ class Product extends \yii\db\ActiveRecord implements ImageInterface
     public function updateProduct($id, $data, $file)
     {
         $product = self::findOne($id);
-        if($product->load($data)) {
+        if($product->load($data)) 
             $product->save();
-        }
-        if(isset($file['name']) && !empty($file['name'])) {
+        if(isset($file['name']) && !empty($file['name']))
+        {
             $image = new Image;
             $image->createOrUploadAnImage($product->image_id, self::TYPE, $file, self::uploadImagePath());
         }
@@ -147,9 +149,8 @@ class Product extends \yii\db\ActiveRecord implements ImageInterface
     public static function getProductImage($id) 
     {
         $product = self::findOne($id);
-        if(is_null($product)) {
+        if(is_null($product)) 
             return '';
-        }
         return Image::getImageNameById($product->image_id);
     }
 

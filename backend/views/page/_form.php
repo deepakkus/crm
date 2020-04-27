@@ -14,9 +14,27 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
+    <label class="control-label" for="page-content">Content</label>
+    <?php echo froala\froalaeditor\FroalaEditorWidget::widget([
+        'model' => $model,
+        'attribute' => 'content',
+        'options' => [
+            'id'=>'content'
+        ],
+        'clientOptions' => [
+            'toolbarInline' => false,
+            'toolbarButtons' => ['fullscreen', 'bold', 'italic', 'underline',
+                                'paragraphStyle', '|', 'paragraphFormat', 'align', 
+                                'outdent', 'indent', '-', 'insertLink', 'insertTable', '|', 
+                                'emoticons', 'specialCharacters', 'insertHR', 'selectAll', 'clearFormatting', '|', 
+                                'help', 'html', '|', 'undo', 'redo'],
+            'theme' => 'royal', 
+            'language' => 'en_gb',
+            'height' => 350,
+        ]
+    ]); ?>
 
-    <div class="form-group">
+    <div class="form-group mt-3">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
 

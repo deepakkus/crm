@@ -14,9 +14,30 @@ use yii\widgets\ActiveForm;
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-8 col-md-8">
+            <div class="col-sm-9 col-md-9">
 
                 <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+
+                <label>Description</label>
+                <?php echo froala\froalaeditor\FroalaEditorWidget::widget([
+                    'model' => $model,
+                    'attribute' => 'long_desp',
+                    'options' => [
+                        'id'=>'long_desp'
+                    ],
+                    'clientOptions' => [
+                        'toolbarInline' => false,
+                        'toolbarButtons' => ['fullscreen', 'bold', 'italic', 'underline',
+                                            'paragraphStyle', '|', 'paragraphFormat', 'align', 
+                                            'outdent', 'indent', '-', 'insertLink', 'insertTable', '|', 
+                                            'emoticons', 'specialCharacters', 'insertHR', 'selectAll', 'clearFormatting', '|', 
+                                            'help', 'html', '|', 'undo', 'redo'],
+                        'theme' => 'royal', 
+                        'language' => 'en_gb',
+                        'height' => 350,
+                        'placeholderText' => 'Enter Product Details Here',
+                    ]
+                ]); ?>
                 
                 <label>Short Description</label>
                 <?php echo froala\froalaeditor\FroalaEditorWidget::widget([
@@ -27,26 +48,15 @@ use yii\widgets\ActiveForm;
                     ],
                     'clientOptions' => [
                         'toolbarInline' => false,
-                        'theme' => 'royal', //optional: dark, red, gray, royal
-                        'language' => 'en_gb' // optional: ar, bs, cs, da, de, en_ca, en_gb, en_us ...
+                        'theme' => 'royal', 
+                        'language' => 'en_gb',
+                        'height' => 200,
+                        'placeholderText' => 'Enter Product Short Details Here',
                     ]
                 ]); ?>
 
-                <label>Long Description</label>
-                <?php echo froala\froalaeditor\FroalaEditorWidget::widget([
-                    'model' => $model,
-                    'attribute' => 'long_desp',
-                    'options' => [
-                        'id'=>'long_desp'
-                    ],
-                    'clientOptions' => [
-                        'toolbarInline' => false,
-                        'theme' => 'dark', //optional: dark, red, gray, royal
-                        'language' => 'en_gb' // optional: ar, bs, cs, da, de, en_ca, en_gb, en_us ...
-                    ]
-                ]); ?>
             </div>
-            <div class="col-sm-4 col-md-4">
+            <div class="col-sm-3 col-md-3">
 
                 <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
 
@@ -69,7 +79,7 @@ use yii\widgets\ActiveForm;
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group mt-3">
             <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
         </div>
 

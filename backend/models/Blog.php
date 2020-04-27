@@ -63,7 +63,7 @@ class Blog extends \yii\db\ActiveRecord implements ImageInterface
             'id' => 'ID',
             'title' => 'Title',
             'content' => 'Content',
-            'short_desp' => 'Short Desp',
+            'short_desp' => 'Blog Summary',
             'author' => 'Author',
             'published_at' => 'Published At',
             'updated_at' => 'Updated At',

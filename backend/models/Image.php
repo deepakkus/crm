@@ -54,25 +54,22 @@ class Image extends \yii\db\ActiveRecord
      */
     public function createNewImage( $type, $image_file, $upload_path )
     {
-        if(empty($type)) {
+        if(empty($type)) 
             return false;
-        }
-        if(empty($upload_path)) {
+        if(empty($upload_path)) 
             $u_path = self::defultUploadPath();
-        } else {
+        else 
             $u_path = $upload_path;
-        }
         $this->type = $type;
         $uploded_image = self::uploadAnImage($image_file, $u_path);
-        if($uploded_image === false) {
+        if($uploded_image === false)
             return false;
-        }
         $this->name = $uploded_image;
-        if($this->insert()) {
+        if($this->insert())
             return $this->id;
-        } else {
+        else 
             return false;
-        }
+        
     }
 
     /**
@@ -90,11 +87,10 @@ class Image extends \yii\db\ActiveRecord
         ]);
         $new_upload->setUploadDir($upload_path);
         try {
-            if($new_upload->upload()) {
+            if($new_upload->upload())
                 return $new_upload->getUploadedFileName();
-            } else {
+            else
                 return false;
-            }
         }catch ( \Bera\Upload\Exception\FileTypeNotSupprotExectpion $e) {
             return false;
         }catch ( \Bera\Upload\Exception\UplodMaxSizeException $e) {
@@ -125,17 +121,19 @@ class Image extends \yii\db\ActiveRecord
      */
     public function createOrUploadAnImage($id, $type, $file, $upload_location) 
     {
-        if(is_null($id) || empty($id)) {
+        if(is_null($id) || empty($id)) 
+        {
             $image_upload_id = $this->createNewImage($type, $file, $upload_location);
             return $image_upload_id;
-        } else {
+        } 
+        else 
+        {
             // find old
             $slider_image = self::findOne($id);
             $slider_image_path = $upload_location . '/' . $slider_image->name;
             //delete old
-            if(\file_exists($slider_image_path)) {
+            if(\file_exists($slider_image_path))
                 \unlink($slider_image_path);
-            }
             // upload new image
             $upload_new_file = self::uploadAnImage($file,$upload_location);
             //save new name
@@ -153,11 +151,11 @@ class Image extends \yii\db\ActiveRecord
     public static function deleteAnImage($id, $image_path) 
     {
         $image = self::findOne($id);
-        if($image) {
+        if($image) 
+        {
             $image_in_folder = $image_path . '/' . $image->name;
-            if(\file_exists($image_in_folder)) {
+            if(\file_exists($image_in_folder))
                 \unlink($image_in_folder);
-            }
             $image->delete();
         }
         return true;
@@ -171,9 +169,8 @@ class Image extends \yii\db\ActiveRecord
     public static function getImageNameById($id) 
     {
         $image = self::findOne($id);
-        if(is_null($image)) {
+        if(is_null($image))
             return '';
-        }
         return $image->name;
     }
 }
