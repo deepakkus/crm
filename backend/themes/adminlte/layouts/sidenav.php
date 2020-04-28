@@ -85,6 +85,32 @@ use yii\widgets\Menu;
                 </li>
 
                 <div class="user-panel u_b_t">
+                    <li class="nav-header">Business Management</li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <p>
+                            Business
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/business/create" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Create</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/business/index" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Business List</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="user-panel u_b_t">
                     <li class="nav-header">Shop</li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">

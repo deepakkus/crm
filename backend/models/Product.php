@@ -44,7 +44,7 @@ class Product extends \yii\db\ActiveRecord implements ImageInterface
     public function rules()
     {
         return [
-            [['name'], 'required'],
+            [['name','price'], 'required'],
             [['short_desp', 'long_desp'], 'string'],
             [['price', 'sell_price'], 'number'],
             [['image_id', 'quantity_in_stock', 'product_cat_id'], 'integer'],

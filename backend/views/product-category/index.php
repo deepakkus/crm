@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="product-category-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h3><?= Html::encode($this->title) ?></h3>
 
     <p>
         <?= Html::a('Create Product Category', ['create'], ['class' => 'btn btn-success']) ?>
@@ -26,11 +26,29 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            // 'id',
             'name',
-            'parent_id',
+            // 'parent_id',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'header' => 'Actions',
+                'headerOptions' => ['style' => 'color:#337ab7'],
+                'template' => '{view}{update}{delete}',
+                'buttons' => [
+                  'view' => function ($url, $model) {
+                      return Html::a('<span class="fa fa-eye"></span>', $url);
+                  },
+      
+                  'update' => function ($url, $model) {
+                      return Html::a('<span class="fa fa-pen"></span>', $url);
+                  },
+                  'delete' => function ($url, $model) {
+                      return Html::a('<span class="fa fa-trash"></span>', $url);
+                  }
+      
+                ],
+            ],
         ],
     ]); ?>
 
