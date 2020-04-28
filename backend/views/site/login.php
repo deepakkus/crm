@@ -6,30 +6,36 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use backend\assets\LoginAsset;
 
-$this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
+LoginAsset::register($this);
+
+$this->title = 'Admin Login';
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class = "main">
+    <div class = "wrapper">
+        <div class="container login-background">
+            <div class="login">
+                <div class="inner-log-in">
+                    <div class="container">
+                        <div style="padding: 27px 0px 27px 0px;">
+                            <h3 class="text-center">CRM Admin</h3>
+                        </div>
+                    </div>
+                    <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+                        <?= $form->field($model, 'username')->textInput() ?>
 
-    <p>Please fill out the following fields to login:</p>
+                        <?= $form->field($model, 'password')->passwordInput() ?>
 
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
-
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
-
-                <?= $form->field($model, 'password')->passwordInput() ?>
-
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                        <?= $form->field($model, 'rememberMe')->checkbox() ?>
+                        <div class="container log-in-btn">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Log In</button>
+                            </div>  
+                        </div>
+                    <?php ActiveForm::end(); ?>
                 </div>
-
-            <?php ActiveForm::end(); ?>
-        </div>
+            </div>
+        </div>  
     </div>
 </div>
