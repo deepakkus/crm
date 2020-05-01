@@ -88,7 +88,7 @@ use yii\widgets\Menu;
                     <li class="nav-header">Business Management</li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
                         <p>
                             Business
                             <i class="right fas fa-angle-left"></i>
@@ -114,7 +114,7 @@ use yii\widgets\Menu;
                     <li class="nav-header">Shop</li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                         <p>
                             Products
                             <i class="right fas fa-angle-left"></i>
@@ -222,7 +222,7 @@ use yii\widgets\Menu;
 
                 <li class="nav-item">
                     <a href="/settings/index" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
+                    <i class="fa fa-wrench" aria-hidden="true"></i>
                     <p>Settings</p>
                     </a>
                 </li>
