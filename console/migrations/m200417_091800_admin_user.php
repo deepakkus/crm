@@ -18,11 +18,19 @@ class m200417_091800_admin_user extends Migration
             'email'    => $this->string(255),
             'access_token' => $this->string(255),
             'image_id' => $this->integer()
-        ]);     
+        ]);  
+        
+        $this->insert('admin_user', [
+            'username' => 'admin',
+            'password' => Yii::$app->security->generatePasswordHash('admin'),
+            'email' => 'admin@xyz.com'
+        ]);
     }
 
     public function down()
     {
+        $this->delete('admin_user', ['id' => 1]);
         $this->dropTable('admin_user');
     }
+
 }
