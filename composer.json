@@ -39,6 +39,9 @@
             "enabled": false
         }
     },
+    "scripts": {
+        "run-app" : "php -S localhost:8000 -t backend/web"
+    },
     "repositories": [
         {
             "type": "composer",
