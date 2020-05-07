@@ -21,7 +21,7 @@ class AdminUser extends \yii\db\ActiveRecord implements IdentityInterface
     /**
      * @var $TYPE
      */
-    public const TYPE = 'ADMIN_USER';
+    //public const TYPE = 'ADMIN_USER';
 
     /**
      * {@inheritdoc}

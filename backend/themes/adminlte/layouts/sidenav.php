@@ -18,7 +18,7 @@ use yii\widgets\Menu;
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-    <img src="/images/dev.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+    <img src="/crm/backend/web/images/dev.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
         style="opacity:0.8">
     <span class="brand-text font-weight-light">CRM</span>
     </a>
@@ -28,7 +28,7 @@ use yii\widgets\Menu;
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-            <img src="/images/dev.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="/crm/backend/web/images/dev.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
                 <a href="#" class="d-block"><?php echo (Yii::$app->user->identity) ? Yii::$app->user->identity->username : 'Admin'  ?> &nbsp;&nbsp; 
@@ -96,13 +96,13 @@ use yii\widgets\Menu;
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/business/create" class="nav-link">
+                            <a href="/crm/backend/business/create" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Create</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/business/index" class="nav-link">
+                            <a href="/crm/backend/business/index" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Business List</p>
                             </a>
@@ -122,20 +122,20 @@ use yii\widgets\Menu;
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/product/create" class="nav-link">
+                            <a href="/crm/backend/product/create" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Create</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/product/index" class="nav-link">
+                            <a href="/crm/backend/product/index" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Product List</p>
                             </a>
                         </li>
                     </ul>
                     <li class="nav-item">
-                        <a href="/product-category" class="nav-link">
+                        <a href="/crm/backend/product-category" class="nav-link">
                             <i class="nav-icon fas fa-chart-pie"></i>
                             <p>Product Category</p>
                         </a>
@@ -160,13 +160,13 @@ use yii\widgets\Menu;
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/blog/create" class="nav-link">
+                            <a href="/crm/backend/blog/create" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Create</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/blog/index" class="nav-link">
+                            <a href="/crm/backend/blog/index" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Blog List</p>
                             </a>
@@ -182,13 +182,13 @@ use yii\widgets\Menu;
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/page/create" class="nav-link">
+                                <a href="/crm/backend/page/create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Create</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/page/index" class="nav-link">
+                                <a href="/crm/backend/page/index" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Pages List</p>
                                 </a>
@@ -205,13 +205,13 @@ use yii\widgets\Menu;
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/slider/create" class="nav-link">
+                                <a href="/crm/backend/slider/create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Create</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/slider/index" class="nav-link">
+                                <a href="/crm/backend/slider/index" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Slider List</p>
                                 </a>
@@ -221,7 +221,7 @@ use yii\widgets\Menu;
                 </div>
 
                 <li class="nav-item">
-                    <a href="/settings/index" class="nav-link">
+                    <a href="/crm/backend/settings/index" class="nav-link">
                     <i class="fa fa-wrench" aria-hidden="true"></i>
                     <p>Settings</p>
                     </a>

@@ -28,7 +28,7 @@ class Blog extends \yii\db\ActiveRecord implements ImageInterface
     /**
      * @var $TYPE
      */
-    public const TYPE = 'BLOG';
+    //public const TYPE = 'BLOG';
 
     /**
      * {@inheritdoc}

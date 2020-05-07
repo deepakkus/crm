@@ -28,7 +28,7 @@ class Product extends \yii\db\ActiveRecord implements ImageInterface
     /**
      * @var $TYPE
      */
-    public const TYPE = 'PRODUCT';
+    //public const TYPE = 'PRODUCT';
 
     /**
      * {@inheritdoc}

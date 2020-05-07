@@ -24,7 +24,7 @@ class Slider extends \yii\db\ActiveRecord implements ImageInterface
     /**
      * @var $TYPE
      */
-    public const TYPE = 'SLIDER';
+    //public const TYPE = 'SLIDER';
 
     /**
      * {@inheritdoc}
